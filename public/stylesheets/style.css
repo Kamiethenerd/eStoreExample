@@ -1,0 +1,33 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.display{
+  min-height: 100px;
+  background-color: cadetblue;
+  width: 100vw;
+}
+.info{
+  background-color: aquamarine;
+  min-height: 100px;
+  width: 100vw;
+  display: block;
+}
+.review{
+  background-color: bisque;
+  min-height: 100px;
+  width:100vw;
+  display: inline-block;
+}
+
+@media only screen and (min-width: 768px){
+  .display{
+    width: 50vw;
+    float: left;
+  }
+}
+

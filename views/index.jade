@@ -1,0 +1,70 @@
+extends layout
+
+block content
+
+  //display section
+  .display
+    h1= title
+    p #{title}
+    -var imgPri ="http:\\/\\/target.scene7.com\\/is\\/image\\/Target\\/14263758"
+    //img#primary(src=imgPri)
+    #carouselExampleControls.carousel.slide(data-ride="carousel")
+      .carousel-inner
+        .carousel-item.active
+          img.d-block.w-100(src=imgPri alt="first picture")
+        .carousel-item
+          -img= imgPri+"_Alt01"
+          img.d-block.w-100(src=img alt="second picture")
+        .carousel-item
+          -img= imgPri+"_Alt02"
+          img.d-block.w-100(src=img alt="third picture")
+        .carousel-item
+          -img= imgPri+"_Alt03"
+          img.d-block.w-100(src=img alt="fourth picture")
+      a.carousel-control-prev(href="#carouselExampleControls" role="button" data-slide="prev")
+        span.carousel-control-prev-icon(aria-hidden="true")
+        span.sr-only Previous
+      a.carousel-control-next(href="#carouselExampleControls" role="button" data-slide="next")
+        span.carousel-control-next-icon(aria-hidden="true")
+        span.sr-only Next
+
+
+
+
+    //carousel
+    //ul
+      li
+        -img= imgPri+"_Alt01"
+        img.tiny(src=img)
+      li
+        -img= imgPri+"_Alt02"
+        img.tiny(src=img)
+      li
+        -img= imgPri+"_Alt03"
+        img.tiny(src=img)
+      li
+        -img= imgPri+"_Alt04"
+        img.tiny(src=img)
+      li
+        -img= imgPri+"_Alt05"
+        img.tiny(src=img)
+      li
+        -img= imgPri+"_Alt06"
+        img.tiny(src=img)
+      li
+        -img= imgPri+"_Alt07"
+        img.tiny(src=img)
+
+  //info section
+  .info
+  //review section
+  .review
+    //pros
+    .pros
+    //cons
+
+
+
+
+
+
