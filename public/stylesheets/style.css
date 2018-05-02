@@ -2,32 +2,78 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+body > div{
+  margin: 0 10px 0 30px;
+}
 
 a {
   color: #00B7FF;
 }
-.display{
+#display{
+  font-family: "Trebuchet MS";
+  font-weight: lighter;
+  /*margin: 0 10px 0 10px;*/
   min-height: 100px;
-  background-color: cadetblue;
+  /*background-color: cadetblue;*/
   width: 100vw;
 }
-.info{
-  background-color: aquamarine;
+#display h2{
+  max-width: 440px;
+}
+#info{
+  /*background-color: aquamarine;*/
+  /*margin-left: 10px;*/
   min-height: 100px;
   width: 100vw;
   display: block;
 }
-.review{
+#review{
   background-color: bisque;
   min-height: 100px;
   width:100vw;
   display: inline-block;
 }
+.price p{
+  float: right;
+}
 
+.callOut{
+  font-size: 1em;
+  font-weight: bold;
+  color: red;
+}
+.btnPanel>input{
+  margin: 10px 10px 0 15px;
+  width: 40vw;
+  height: 40px;
+  color: white;
+  font-weight: lighter;
+  background: linear-gradient(white 1%, black);
+}
+  .btnPanel>input:first-child{
+    background: linear-gradient(white 1%, red) ;
+  }
+@media only screen and (min-width: 530px){
+  #display h2{
+    max-width:80vw;
+  }
+}
 @media only screen and (min-width: 768px){
-  .display{
+  body > div{
+    margin: 0 10px 0 30px;
+  }
+  #display{
     width: 50vw;
     float: left;
+  }
+  #review{
+    width: 50vw;
+    float: left;
+    margin-right: 20px;
+  }
+  .btnPanel>input{
+    width: 20vw;
+    margin: 10px 10px 0 10px;
   }
 }
 

@@ -3,32 +3,46 @@ extends layout
 block content
 
   //display section
-  .display
-    h1= title
-    p #{title}
-    -var imgPri ="http:\\/\\/target.scene7.com\\/is\\/image\\/Target\\/14263758"
-    //img#primary(src=imgPri)
-    #carouselExampleControls.carousel.slide(data-ride="carousel")
-      .carousel-inner
-        .carousel-item.active
+  #display
+    h2= headline
+    //-var imgPri ="http:\\/\\/target.scene7.com\\/is\\/image\\/Target\\/14263758"
+
+    //img#primary(src=primaryImg)
+    #carousel-custom.carousel.slide(data-ride="carousel")
+      .carousel-outer
+        .carousel-inner
+          .item.active
+            img(src=primaryImg)
+          .item
+            img(src=primaryImg + "_Alt02")
+          .item
+            img(src=primaryImg + "_Alt03")
+        a.left.carousel-control(href='#carousel-example-generic' data-slide='prev')
+          span.glyphicon.glyphicon-chevron-left
+        a.right.carousel-control(href='#carousel-example-generic' data-slide='next')
+          span.glyphicon.glyphicon-chevron-right
+
+
+
+    //#carouselExampleControls.carousel.slide(data-ride="carousel")
+      //.carousel-inner
+        //.carousel-item.active
           img.d-block.w-100(src=imgPri alt="first picture")
-        .carousel-item
+        //.carousel-item
           -img= imgPri+"_Alt01"
           img.d-block.w-100(src=img alt="second picture")
-        .carousel-item
+        //.carousel-item
           -img= imgPri+"_Alt02"
           img.d-block.w-100(src=img alt="third picture")
-        .carousel-item
+        //.carousel-item
           -img= imgPri+"_Alt03"
           img.d-block.w-100(src=img alt="fourth picture")
-      a.carousel-control-prev(href="#carouselExampleControls" role="button" data-slide="prev")
+      //a.carousel-control-prev(href="#carouselExampleControls" role="button" data-slide="prev")
         span.carousel-control-prev-icon(aria-hidden="true")
         span.sr-only Previous
-      a.carousel-control-next(href="#carouselExampleControls" role="button" data-slide="next")
+      //a.carousel-control-next(href="#carouselExampleControls" role="button" data-slide="next")
         span.carousel-control-next-icon(aria-hidden="true")
         span.sr-only Next
-
-
 
 
     //carousel
@@ -56,9 +70,35 @@ block content
         img.tiny(src=img)
 
   //info section
-  .info
+  #info
+    .price
+      h3= price
+      div #{qualifier}
+    hr
+    .callOut
+      p #{callOut}
+    hr
+    .order
+      //quanity input
+      .quanity Quantity
+        input(type='number')
+      .btnPanel
+        //pick up in store button
+        input(type='button' value='PICK UP IN STORE')
+        //add to cart button
+        input(type='button' value='ADD TO CART')
+    .returns
+    .options
+    .highlights
+      h3 product highlights
+      //ul
+      //  -
+      //    if(highlights)
+      //    each line in higlights
+      //      li=line
+
   //review section
-  .review
+  #review REVIEWS
     //pros
     .pros
     //cons
