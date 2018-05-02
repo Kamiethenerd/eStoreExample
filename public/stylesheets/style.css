@@ -33,6 +33,9 @@ a {
   width:100vw;
   display: inline-block;
 }
+.item img{
+  margin: 0 0 0 5em;
+}
 .price p{
   float: right;
 }
@@ -53,6 +56,11 @@ a {
   .btnPanel>input:first-child{
     background: linear-gradient(white 1%, red) ;
   }
+
+#carousel-custom{
+  max-height: 30em;
+  max-width: 30em;
+}
 @media only screen and (min-width: 530px){
   #display h2{
     max-width:80vw;
@@ -66,13 +74,17 @@ a {
     width: 50vw;
     float: left;
   }
+  #info{
+    margin-right: 20px;
+    width: 90vw;
+  }
   #review{
     width: 50vw;
     float: left;
     margin-right: 20px;
   }
   .btnPanel>input{
-    width: 20vw;
+    max-width: 15vw;
     margin: 10px 10px 0 10px;
   }
 }

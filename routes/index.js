@@ -19,8 +19,8 @@ router.get('/', function(req, res, next) {
 });
 
 // router.get('/', function(req, res, next){
-//     console.log('loading data');
-//     res.json({data: obj});
+//     console.log('loading data.js');
+//     res.json({data.js: obj});
 // });
 
 
